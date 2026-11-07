@@ -30,9 +30,9 @@ PAGE_SIZE = A5  # the only supported size: printed double-sided on A5 paper
 # Printer-friendly greyscale board (newspaper style), as grey levels (0 = black, 1 = white).
 LIGHT_SQUARE = 1.0
 DARK_SQUARE = 0.72
-COORD_ON_LIGHT = 0.5       # coordinate text on light squares
-COORD_ON_DARK = 0.3        # coordinate text on dark squares (white would be too faint in print)
-BORDER_WIDTH = 0.8         # pt, the frame around the board
+COORD_ON_LIGHT = 0.5  # coordinate text on light squares
+COORD_ON_DARK = 0.3  # coordinate text on dark squares (white would be too faint in print)
+BORDER_WIDTH = 0.8  # pt, the frame around the board
 
 FONT = "Helvetica"
 FONT_BOLD = "Helvetica-Bold"
@@ -47,10 +47,10 @@ class PreparedPuzzle:
     puzzle_id: str
     rating: int
     themes: list[str]
-    board: chess.Board          # position the solver faces
+    board: chess.Board  # position the solver faces
     solver: chess.Color
-    last_move_san: str          # opponent's move that led to the position, e.g. "17...Kd7"
-    solution_san: str           # e.g. "18. Be6+ Kd8 19. Qf8#"
+    last_move_san: str  # opponent's move that led to the position, e.g. "17...Kd7"
+    solution_san: str  # e.g. "18. Be6+ Kd8 19. Qf8#"
 
     @property
     def to_move(self) -> str:
@@ -341,9 +341,9 @@ def _draw_puzzle_page(c: canvas.Canvas, lay: Layout, puzzle: PreparedPuzzle, num
 
 
 SOLUTIONS_PER_PAGE = 20
-SOLUTION_SIZE = 8         # pt, the moves
-SOLUTION_MIN_SIZE = 6.5   # pt, long solutions shrink down to this before wrapping
-THEME_SIZE = 7            # pt, the themes line
+SOLUTION_SIZE = 8  # pt, the moves
+SOLUTION_MIN_SIZE = 6.5  # pt, long solutions shrink down to this before wrapping
+THEME_SIZE = 7  # pt, the themes line
 THEME_MIN_SIZE = 5.5
 
 
