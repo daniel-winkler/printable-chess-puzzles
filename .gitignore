@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Data: each user downloads the CSV and builds the database locally
+data/*
+!data/.gitkeep
+
+# Generated PDFs
+output/

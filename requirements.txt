@@ -1,0 +1,5 @@
+# Python 3.10 or newer. SQLite support is built into Python.
+chess>=1.10        # board logic, move notation, board diagrams
+reportlab>=4.0     # PDF generation
+svglib>=1.5        # converts the board diagram (SVG) for reportlab
+zstandard>=0.22    # reads the compressed .csv.zst download directly
