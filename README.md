@@ -34,7 +34,7 @@ After the import, the downloaded `.zst` file is no longer needed and can be dele
 ### 1. Clone and install
 
 ```bash
-git clone <this-repo-url>
+git clone https://github.com/daniel-winkler/printable-chess-puzzles.git
 cd printable-chess-puzzles
 python -m venv .venv
 ```
