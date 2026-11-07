@@ -32,8 +32,7 @@ LIGHT_SQUARE = 1.0
 DARK_SQUARE = 0.72
 COORD_ON_LIGHT = 0.5       # coordinate text on light squares
 COORD_ON_DARK = 0.3        # coordinate text on dark squares (white would be too faint in print)
-PIECE_SCALE = 0.95         # pieces fill 95% of a square, leaving the corners for coordinates
-BORDER_WIDTH = 0.9         # pt, the frame around the board
+BORDER_WIDTH = 0.8         # pt, the frame around the board
 
 FONT = "Helvetica"
 FONT_BOLD = "Helvetica-Bold"
@@ -116,10 +115,9 @@ def draw_board(c: canvas.Canvas, board: chess.Board, orientation: chess.Color,
             piece = board.piece_at(chess.square(file, rank))
             if piece:
                 drawing = _piece_drawing(piece.symbol())
-                piece_size = sq * PIECE_SCALE
                 c.saveState()
-                c.translate(sx + (sq - piece_size) / 2, sy + (sq - piece_size) / 2)
-                c.scale(piece_size / drawing.width, piece_size / drawing.height)
+                c.translate(sx, sy)
+                c.scale(sq / drawing.width, sq / drawing.height)
                 renderPDF.draw(drawing, c, 0, 0)
                 c.restoreState()
 
