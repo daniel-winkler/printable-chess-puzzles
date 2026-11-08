@@ -4,6 +4,13 @@ Pick chess puzzles from the [Lichess puzzle database](https://database.lichess.o
 (over 6 million puzzles) by rating and theme, and print them as a PDF: one puzzle per page,
 newspaper style, with the answers at the end.
 
+<p align="center">
+  <a href="screenshots/1.png"><img src="screenshots/1.png" alt="Cover page" width="24%"></a>
+  <a href="screenshots/2.png"><img src="screenshots/2.png" alt="Puzzle page, white to move" width="24%"></a>
+  <a href="screenshots/3.png"><img src="screenshots/3.png" alt="Puzzle page, black to move" width="24%"></a>
+  <a href="screenshots/4.png"><img src="screenshots/4.png" alt="Solutions page" width="24%"></a>
+</p>
+
 > **Printing:** the PDF is made for **A5 paper, printed double-sided**. See [Printing](#printing).
 
 - Choose a rating range, themes to include (any or all), and themes to exclude.
