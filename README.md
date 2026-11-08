@@ -79,12 +79,13 @@ You can also pass a path: `python scripts/import_database.py path/to/lichess_db_
 
 ### Generate a PDF
 
+For a quick test of the PDF generation run this:
+
 ```bash
-python main.py generate --count 100 --min-rating 1300 --max-rating 1600 --themes fork skewer
+python main.py generate --count 10 --no-record
 ```
 
-The PDF is written to `output/puzzles_<date>_<time>.pdf` (or use `-o my_puzzles.pdf`). A run of
-100 puzzles takes a few seconds: selecting them takes under a second, and writing the PDF about 2 seconds.
+The PDF is written to `output/puzzles_<date>_<time>.pdf` (or use `-o my_puzzles.pdf`).
 
 | Option | Meaning |
 |---|---|
@@ -111,7 +112,7 @@ If fewer puzzles match than you asked for, the PDF contains the ones that do and
 Puzzle lengths are themes too: `oneMove`, `short`, `long`, `veryLong`, `mateIn1` ... `mateIn5`.
 The full list of themes is explained at <https://lichess.org/training/themes>.
 
-More examples:
+Examples:
 
 ```bash
 # Mates in 2 between 1000 and 1400
