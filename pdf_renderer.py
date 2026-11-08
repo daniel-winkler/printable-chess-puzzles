@@ -384,7 +384,7 @@ def _draw_answer_key(c: canvas.Canvas, lay: Layout, puzzles: list[PreparedPuzzle
                 y -= sol_size * (1.1 if wrapped else 1.15)
 
             # Themes: one line, grey, shrunk to fit.
-            themes = "Themes: " + (", ".join(p.themes) or "-")
+            themes = ", ".join(humanize_theme(t) for t in p.themes) or "-"
             theme_size = _fit_size(themes, FONT, THEME_SIZE, THEME_MIN_SIZE, text_w)
             y -= 0 if wrapped else theme_size * 0.15
             c.setFillGray(0.4)
